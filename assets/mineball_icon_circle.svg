@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title">
+  <title>mineball circular icon</title>
+  <defs>
+    <style>
+      .bg{fill:#0f0f10}
+      .stone{fill:#7d7d7d}
+      .dirt{fill:#7a5230}
+      .emerald{fill:#0dbf7a}
+      .glow{opacity:0.14;fill:#0dbf7a}
+    </style>
+  </defs>
+  <rect width="512" height="512" rx="64" fill="#0b0b0b"/>
+  <g transform="translate(256,256)">
+    <circle r="196" fill="#121212"/>
+    <!-- ring of blocks, denser to suggest rotation -->
+    <g transform="rotate(-10)">
+      <g>
+        <rect x="148" y="-18" width="36" height="36" class="dirt" rx="4"/>
+        <rect x="148" y="-18" width="36" height="18" class="stone" opacity="0.95"/>
+      </g>
+      <!-- repeats (8 blocks) -->
+      <use href="#" transform="rotate(45)"/>
+    </g>
+
+    <!-- stylized center stack larger for PFP clarity -->
+    <rect x="-86" y="-86" width="172" height="172" rx="12" class="stone"/>
+    <rect x="-56" y="-56" width="36" height="36" class="dirt" rx="4"/>
+    <rect x="8" y="-56" width="36" height="36" class="emerald" rx="4"/>
+    <rect x="22" y="-4" width="36" height="36" class="dirt" rx="4"/>
+    <rect x="-22" y="24" width="36" height="36" class="emerald" rx="4"/>
+    <circle r="38" class="glow"/>
+  </g>
+</svg>
