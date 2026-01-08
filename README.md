@@ -1,4 +1,5 @@
 # mineball
+<img width="1792" height="576" alt="Gemini_Generated_Image_w685cpw685cpw685" src="https://github.com/user-attachments/assets/3002027a-ba52-4a13-af7e-70fc1f90b2b9" />
 
 Mineball is a crypto-native, mining-inspired flywheel meme coin and visual identity focused on growth, block-by-block accumulation, and compounding value. This repository contains the primary vector assets and usage guidance for the project logo system.
 
