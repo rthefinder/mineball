@@ -1,5 +1,7 @@
 # mineball ⛏️
 
+<img width="1792" height="576" alt="Gemini_Generated_Image_w685cpw685cpw685" src="https://github.com/user-attachments/assets/3d0e53a1-8afb-4917-b18f-993b369a6366" />
+
 > A mining-inspired flywheel meme coin on Solana
 
 **Blocks are mined. Resources accumulate. Value compounds. The system grows block by block.**
