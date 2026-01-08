@@ -1,0 +1,54 @@
+name: Deploy to Devnet
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+jobs:
+  deploy-devnet:
+    name: Deploy to Devnet
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: 1.75.0
+          override: true
+          profile: minimal
+      
+      - name: Setup Solana
+        run: |
+          sh -c "$(curl -sSfL https://release.solana.com/v1.17.0/install)"
+          echo "$HOME/.local/share/solana/install/active_release/bin" >> $GITHUB_PATH
+      
+      - name: Setup Anchor
+        run: |
+          cargo install --git https://github.com/coral-xyz/anchor avm --locked --force
+          avm install 0.29.0
+          avm use 0.29.0
+      
+      - name: Configure Solana
+        env:
+          SOLANA_PRIVATE_KEY: ${{ secrets.SOLANA_DEVNET_PRIVATE_KEY }}
+        run: |
+          echo "$SOLANA_PRIVATE_KEY" > ~/keypair.json
+          solana config set --url https://api.devnet.solana.com
+          solana config set --keypair ~/keypair.json
+      
+      - name: Check balance
+        run: solana balance
+      
+      - name: Build program
+        run: anchor build
+      
+      - name: Deploy program
+        run: anchor deploy --provider.cluster devnet
+      
+      - name: Cleanup
+        if: always()
+        run: rm -f ~/keypair.json

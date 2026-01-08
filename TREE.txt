@@ -1,0 +1,75 @@
+.
+├── ASSETS_README.md
+├── Anchor.toml
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── Cargo.toml
+├── LICENSE
+├── NEXT_STEPS.md
+├── PROJECT_SUMMARY.md
+├── README.md
+├── TREE.txt
+├── apps
+│   └── web
+│       ├── next-env.d.ts
+│       ├── next.config.js
+│       ├── package.json
+│       ├── postcss.config.js
+│       ├── src
+│       │   ├── app
+│       │   ├── components
+│       │   └── pages
+│       ├── tailwind.config.js
+│       └── tsconfig.json
+├── assets
+│   ├── mineball_icon.svg
+│   ├── mineball_icon_circle.svg
+│   └── mineball_wordmark.svg
+├── docs
+│   ├── NARRATIVE.md
+│   ├── SECURITY.md
+│   ├── TECHNICAL.md
+│   └── TOKENOMICS.md
+├── infra
+│   └── README.md
+├── package.json
+├── packages
+│   ├── analytics
+│   │   ├── package.json
+│   │   ├── src
+│   │   │   ├── flywheel.ts
+│   │   │   ├── index.ts
+│   │   │   └── metrics.ts
+│   │   └── tsconfig.json
+│   └── shared
+│       ├── package.json
+│       ├── src
+│       │   ├── constants.ts
+│       │   ├── index.ts
+│       │   ├── types.ts
+│       │   └── utils.ts
+│       └── tsconfig.json
+├── pnpm-workspace.yaml
+├── programs
+│   └── mineball
+│       ├── Cargo.toml
+│       └── src
+│           ├── constants.rs
+│           ├── errors.rs
+│           ├── events.rs
+│           ├── instructions
+│           ├── lib.rs
+│           └── state.rs
+├── rust-toolchain.toml
+├── scripts
+│   ├── deploy.js
+│   ├── initialize.js
+│   ├── package.json
+│   └── simulate.js
+├── setup.sh
+├── tests
+│   ├── mineball.test.ts
+│   └── tsconfig.json
+└── turbo.json
+
+21 directories, 52 files
